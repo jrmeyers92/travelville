@@ -96,6 +96,26 @@
 			</ul>
 		</section>
 
+		<!-- SEARCH  -->
+
+		<section class="section-search section teal darken1 white-text center">
+			<div class="container">
+				<div class="row">
+					<div class="col s12">
+						<h3>Search Destinations</h3>
+						<div class="input-field">
+							<input
+								type="text"
+								class="white grey-text autocomplete"
+								placeholder="Aruba, Cancun, etc..."
+								id="autocomplete-input"
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
 		<!--Import jQuery before materialize.js-->
 		<script
 			type="text/javascript"
@@ -113,6 +133,20 @@
 					height: 500,
 					transition: 500,
 					interval: 6000,
+				});
+
+				// init autocomplete
+				$(".autocomplete").autocomplete({
+					data: {
+						Aruba: null,
+						"Cancun Mexico": null,
+						Hawaii: null,
+						Flordia: null,
+						California: null,
+						Jamacia: null,
+						Europe: null,
+						"The Bahamas": null,
+					},
 				});
 			});
 		</script>
